@@ -12,12 +12,11 @@ install.packages("devtools")
 #utilizzai i pacchetti in modo più semplice
 library(devtools)
 
-
+#dal pacchetto "devtools", prende il codice sorgente del pacchetto imageRy da GitHub
 install_github("GianlucaNanni/imageRy")
-#appartiene al pacchetto "devtools", scaricare e installare un pacchetto direttamente da GitHub
-
-#La stringa "GianlucaNanni/imageRy" indica: 
 #GianlucaNanni → il nome dell’utente o dell’organizzazione su GitHub
 #imageRy → il nome del pacchetto contenuto nel repository
 
 library(imageRy)
+#manipola e visualizza immagini raster
+

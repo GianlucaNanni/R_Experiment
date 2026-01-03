@@ -36,8 +36,8 @@ library(viridis)
 install.packages("devtools")
 library(devtools)
 
-install_github("GianlucaNanni/imageRy")
-library(imageRy)
+install_github("GianlucaNanni/Experiment")
+library(Experiment)
 
 install.packages("terra", repos = "https://cloud.r-project.org/")
 #install.packages("terra")

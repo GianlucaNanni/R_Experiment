@@ -6,26 +6,52 @@ setwd("C:/telerilevamento/") # Windows
 
 # Installazione pacchetto
 install.packages("terra")
-#analisi e la gestione di dati geospaziali raster e vettoriali
+# analisi e la gestione di dati geospaziali raster e vettoriali
 
-#Funzione per richiamare il pacchetto, ne attiva le funzioni
+# Funzione per richiamare il pacchetto, ne attiva le funzioni
 library(terra)
 
 install.packages("devtools")
-#utilizzai i pacchetti in modo più semplice
+# utilizzai i pacchetti in modo più semplice
 library(devtools)
 
-#dal pacchetto "devtools", prende il codice sorgente del pacchetto imageRy da GitHub
+# dal pacchetto "devtools", prende il codice sorgente del pacchetto imageRy da GitHub
 install_github("GianlucaNanni/imageRy")
 #GianlucaNanni → il nome dell’utente o dell’organizzazione su GitHub
 #imageRy → il nome del pacchetto contenuto nel repository
 
 library(imageRy)
-#manipola e visualizza immagini raster
+# manipola e visualizza immagini raster
 
 
 
 
 
 # R code for visualizing satellite data
+
+install.packages("viridis")
+# palette di colori ottimizzate per grafici e mappe
+library(viridis)
+
+install.packages("devtools")
+library(devtools)
+
+install_github("GianlucaNanni/imageRy")
+library(imageRy)
+
+install.packages("terra", repos = "https://cloud.r-project.org/")
+#install.packages("terra")
+library(terra)
+
+im.list()
+#mostra le immagini raster caricate nella memoria di R tramite "imageRy"
+
+b2 = im.import("sentinel.dolomites.b2.tif")
+plot(b2, col=cl)
+
+
+
+
+
+
 

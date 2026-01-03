@@ -1,3 +1,6 @@
+# https://github.com/ducciorocchini/Telerilevamento_2025/tree/main/Code
+
+
 # Indicare la cartella da cui estrarre i dati
 setwd("C:/telerilevamento/") # Windows
 
@@ -19,4 +22,10 @@ install_github("GianlucaNanni/imageRy")
 
 library(imageRy)
 #manipola e visualizza immagini raster
+
+
+
+
+
+# R code for visualizing satellite data
 

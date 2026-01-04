@@ -15,10 +15,12 @@ install.packages("devtools")
 # utilizzai i pacchetti in modo più semplice
 library(devtools)
 
-# dal pacchetto "devtools", prende il codice sorgente del pacchetto imageRy da GitHub
-install_github("GianlucaNanni/imageRy")
-#GianlucaNanni → il nome dell’utente o dell’organizzazione su GitHub
+# serve installare in R un pacchetto che si trova su GitHub
+#install_github("ducciorocchini/imageRy")
+#ducciorocchini → il nome dell’utente o dell’organizzazione su GitHub
 #imageRy → il nome del pacchetto contenuto nel repository
+
+#ducciorocchini ha creato lui un pacchetto, non disponibile sul CRAN, che per essere utilizzato deve essere scaricato da GitHub
 
 library(imageRy)
 # manipola e visualizza immagini raster
@@ -29,19 +31,19 @@ library(imageRy)
 
 # R code for visualizing satellite data
 
-install.packages("viridis")
+#install.packages("viridis")
 # palette di colori ottimizzate per grafici e mappe
 library(viridis)
 
-install.packages("devtools")
+#install.packages("devtools")
 library(devtools)
 
-install_github("GianlucaNanni/Experiment")
-library(Experiment)
-
-install.packages("terra", repos = "https://cloud.r-project.org/")
+#install.packages("terra", repos = "https://cloud.r-project.org/")
 #install.packages("terra")
 library(terra)
+
+#install_github("ducciorocchini/imageRy")
+library(imageRy)
 
 im.list()
 #mostra le immagini raster caricate nella memoria di R tramite "imageRy"

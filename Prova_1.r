@@ -2,16 +2,16 @@
 
 
 # Indicare la cartella da cui estrarre i dati
-setwd("C:/telerilevamento/") # Windows
+setwd("C:/R_Experiment/") # Windows
 
 # Installazione pacchetto
-install.packages("terra")
+#install.packages("terra")
 # analisi e la gestione di dati geospaziali raster e vettoriali
 
 # Funzione per richiamare il pacchetto, ne attiva le funzioni
 library(terra)
 
-install.packages("devtools")
+#install.packages("devtools")
 # utilizzai i pacchetti in modo più semplice
 library(devtools)
 

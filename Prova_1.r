@@ -1,5 +1,9 @@
 # https://github.com/ducciorocchini/Telerilevamento_2025/tree/main/Code
 
+#https://www.copernicus.eu/en/faq
+#per scaricare immagini
+
+
 
 # Indicare la cartella da cui estrarre i dati
 setwd("C:/R_Experiment/") # Windows

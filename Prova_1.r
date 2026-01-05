@@ -41,10 +41,19 @@ im.list()
 # Importing data
 b2 <- im.import("sentinel.dolomites.b2.tif")
 
+# Plotting the data
+#clg <- colorRampPalette(c("green", "yellow", "red"))(3) #colori netti
+#plot(b2, col=clg)
+clg <- colorRampPalette(c("green", "yellow", "red"))(100) #colori sfumati
+plot(b2, col=clg)
 
-
-
-
+# importing the additional bands
+b3 <- im.import("sentinel.dolomites.b3.tif")
+plot(b3, col=clg)
+b4 <- im.import("sentinel.dolomites.b4.tif")
+plot(b4, col=clg)
+b8 <- im.import("sentinel.dolomites.b8.tif")
+plot(b8, col=clg)
 
 
 

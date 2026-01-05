@@ -16,7 +16,8 @@ library(terra)
 # palette di colori ottimizzate per grafici e mappe
 library(viridis)
 
-
+#install.packages("ggplot2")
+# creazione di grafici
 library(ggplot2)
 
 #install.packages("devtools")

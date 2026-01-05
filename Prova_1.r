@@ -1,5 +1,6 @@
 #https://www.copernicus.eu/en/faq
 
+
 #Telerilevamento2024
 
 # 1. R code for visualizing satellite data
@@ -26,36 +27,20 @@ library(devtools)
 
 # installa in R un pacchetto che si trova su GitHub e non sul CRAN
 options(download.file.method = "wininet")
-devtools::install_github("ducciorocchini/imageRy", dependencies = TRUE)
+#devtools::install_github("ducciorocchini/imageRy", dependencies = TRUE)
 #ducciorocchini → il nome dell’utente o dell’organizzazione su GitHub
 #imageRy → il nome del pacchetto contenuto nel repository
 
 library(imageRy)
 # manipola e visualizza immagini raster
-
-
-
-
-
-# R code for visualizing satellite data
-
-
-
-#install.packages("devtools")
-library(devtools)
-
-#install.packages("terra", repos = "https://cloud.r-project.org/")
-#install.packages("terra")
-library(terra)
-
-#install_github("ducciorocchini/imageRy")
-library(imageRy)
+#istruzioni_ https://htmlpreview.github.io/?https://github.com/ducciorocchini/imageRy/blob/main/imageRy_rapid_manual.html
 
 im.list()
-#mostra le immagini raster caricate nella memoria di R tramite "imageRy"
+#mostra l'elenco dei dati disponibili nella memoria di R tramite "imageRy"
 
-b2 = im.import("sentinel.dolomites.b2.tif")
-plot(b2, col=cl)
+# Importing data
+b2 <- im.import("sentinel.dolomites.b2.tif")
+
 
 
 

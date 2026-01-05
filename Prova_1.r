@@ -1,9 +1,8 @@
-# https://github.com/ducciorocchini/Telerilevamento_2025/tree/main/Code
-
 #https://www.copernicus.eu/en/faq
-#per scaricare immagini
 
+#Telerilevamento2024
 
+# 1. R code for visualizing satellite data
 
 # Indicare la cartella da cui estrarre i dati
 setwd("C:/R_Experiment/") # Windows
@@ -11,20 +10,24 @@ setwd("C:/R_Experiment/") # Windows
 # Installazione pacchetto
 #install.packages("terra")
 # analisi e la gestione di dati geospaziali raster e vettoriali
-
-# Funzione per richiamare il pacchetto, ne attiva le funzioni
 library(terra)
+
+#install.packages("viridis")
+# palette di colori ottimizzate per grafici e mappe
+library(viridis)
+
+
+library(ggplot2)
 
 #install.packages("devtools")
 # utilizzai i pacchetti in modo più semplice
 library(devtools)
 
-# serve installare in R un pacchetto che si trova su GitHub
-#install_github("ducciorocchini/imageRy")
+# installa in R un pacchetto che si trova su GitHub e non sul CRAN
+options(download.file.method = "wininet")
+devtools::install_github("ducciorocchini/imageRy", dependencies = TRUE)
 #ducciorocchini → il nome dell’utente o dell’organizzazione su GitHub
 #imageRy → il nome del pacchetto contenuto nel repository
-
-#ducciorocchini ha creato lui un pacchetto, non disponibile sul CRAN, che per essere utilizzato deve essere scaricato da GitHub
 
 library(imageRy)
 # manipola e visualizza immagini raster
@@ -35,9 +38,7 @@ library(imageRy)
 
 # R code for visualizing satellite data
 
-#install.packages("viridis")
-# palette di colori ottimizzate per grafici e mappe
-library(viridis)
+
 
 #install.packages("devtools")
 library(devtools)

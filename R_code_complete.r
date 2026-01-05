@@ -82,7 +82,7 @@ p224r63_2011
 dev.off()
 
 # Funzione plot: immagine per visualizzare una sola banda ($banda 1)
-plot(p224r63_2011$B1_sre)
+plot(p224r63_2011$B1_sre) #oppure plot(p224r63_2011[[1]]) #[[1]]corrisponde alla banda
 
 # Plot della banda 1 con colori predefiniti (colorRampPalette)
 cls <- colorRampPalette(c("red","blue","green","purple")) (100)

@@ -34,4 +34,9 @@ plot(img[[2]])
 par(mfcol=c(1,2))
 plot(img[[1]])
 plot(img[[2]])
+# Plot delle prime 3 bande , (par(mfrow=c(2,2))distribuzione quadrata se 4 bande
+par(mfrow=c(1,3))
+plot(img[[1]])
+plot(img[[2]])
+plot(img[[3]])
 

@@ -3,7 +3,7 @@
 
 #Telerilevamento2024
 
-# 1. R code for visualizing satellite data
+# 1. Satellite data visualisation in R by imageRy
 
 # Indicare la cartella da cui estrarre i dati
 setwd("C:/R_Experiment/") # Windows
@@ -55,5 +55,5 @@ plot(b4, col=clg)
 b8 <- im.import("sentinel.dolomites.b8.tif")
 plot(b8, col=clg)
 
-
+# multiframe
 

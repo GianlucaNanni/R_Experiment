@@ -8,6 +8,7 @@ plot(img)
 cl <- colorRampPalette(c("green", "yellow", "red"))(100)
 plot(img, col=cl)
 
+# Landsat 8 (2013-...)
 # B1: Aerosol costiero (ultra-blu, Studi dell’atmosfera, coste, particelle nell’aria)
 # B2: Blu (Acque, sedimenti, zone costiere)
 # B3: Verde (Vegetazione, vigore delle piante)
@@ -52,3 +53,4 @@ pdf("multitemporale.pdf") #Salva immagine pdf in C:nome_cartella
 par(mfrow=c(1,2))
 plotRGB(img, r=3, g=2, b=1, stretch="Lin")
 
+#descrivere plotRGB

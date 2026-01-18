@@ -3,6 +3,7 @@
 setwd("C:/R_Experiment/")
 
 #opzione.1
+#install.packages("raster")
 library(raster)
 img<-brick("vene2.tiff")
 img
@@ -11,13 +12,12 @@ cl <- colorRampPalette(c("green", "yellow", "red"))(100)
 plot(img, col=cl)
 
 #opzione.2
+#install.packages("terra")
 library(terra)
-png <- rast("vene2.tiff")
-png
-plot(png, stretch="lin")
-#cl <- colorRampPalette(c("green", "yellow", "red"))(100)
-plotRGB(r, r=1, g=2, b=3, stretch="lin")
-
+img <- rast("vene2.tiff")
+img
+plot(img, stretch="lin")
+plotRGB(img, r=1, g=2, b=3, stretch="lin")
 
 
 # Landsat 8 (2013-...)
@@ -63,6 +63,29 @@ plot(img[[3]])
 # Funzione plotRGB: crea immagini multibanda (colori naturali)
 pdf("multitemporale.pdf") #Salva immagine pdf in C:nome_cartella
 par(mfrow=c(1,2))
-plotRGB(img, r=3, g=2, b=1, stretch="Lin")
+plotRGB(img, r=1, g=2, b=3, stretch="Lin")
+plotRGB(img, r=1, g=2, b=3, stretch="hist")
+#Cambiare ordine dei numeri significa cambiare quale banda dell’immagine viene assegnata ai colori Rosso–Verde–Bl
+plotRGB(img, r=3, g=4, b=2, stretch="Lin")
 
 
+
+
+#install.packages("raster")
+library(raster)
+
+#install.packages("RStoolbox")
+#calcolo degli indici spettrali
+library(RStoolbox)
+
+#install.packages("rasterVis")
+#visualizzazione e interazione dati raster
+library(rasterVis)
+
+# Importare tutte le immagini INSIEME
+#crea lista di file per la funzione lapply
+rlist <- list.files(pattern=".tiff") # pattern=scritta in comune nei file
+rlist
+import <- lapply(rlist,raster)
+# Funzione per avere le info sul file
+import

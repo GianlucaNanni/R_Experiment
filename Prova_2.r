@@ -1,12 +1,24 @@
 #https://www.copernicus.eu/en/faq
 
 setwd("C:/R_Experiment/")
+
+#opzione.1
 library(raster)
 img<-brick("vene2.tiff")
 img
 plot(img)
 cl <- colorRampPalette(c("green", "yellow", "red"))(100)
 plot(img, col=cl)
+
+#opzione.2
+library(terra)
+png <- rast("vene2.tiff")
+png
+plot(png, stretch="lin")
+#cl <- colorRampPalette(c("green", "yellow", "red"))(100)
+plotRGB(r, r=1, g=2, b=3, stretch="lin")
+
+
 
 # Landsat 8 (2013-...)
 # B1: Aerosol costiero (ultra-blu, Studi dell’atmosfera, coste, particelle nell’aria)
@@ -53,4 +65,4 @@ pdf("multitemporale.pdf") #Salva immagine pdf in C:nome_cartella
 par(mfrow=c(1,2))
 plotRGB(img, r=3, g=2, b=1, stretch="Lin")
 
-#descrivere plotRGB
+

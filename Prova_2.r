@@ -1,5 +1,9 @@
 #https://www.copernicus.eu/en/faq
 
+
+
+# 1. Bande e parametri grafici
+
 setwd("C:/R_Experiment/")
 
 #opzione.1
@@ -69,7 +73,10 @@ plotRGB(img, r=1, g=2, b=3, stretch="hist")
 plotRGB(img, r=3, g=4, b=2, stretch="Lin")
 
 
+# 2.
 
+# Indicare la cartella da cui estrarre i dati
+setwd("C:/R_Experiment/") #setwd("C:/R_Experiment/Sotto_cartella/")
 
 #install.packages("raster")
 library(raster)
@@ -82,10 +89,13 @@ library(RStoolbox)
 #visualizzazione e interazione dati raster
 library(rasterVis)
 
-# Importare tutte le immagini INSIEME
+# Importare tutte le immagini INSIEME, devono ritagliare la stessa area (utile con bande diverse)
 #crea lista di file per la funzione lapply
 rlist <- list.files(pattern=".tiff") # pattern=scritta in comune nei file
 rlist
 import <- lapply(rlist,raster)
 # Funzione per avere le info sul file
 import
+TGr <- stack(import)
+# Funzione per avere le info sul file
+TGr

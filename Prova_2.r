@@ -103,5 +103,11 @@ plot(TGr)
 # Funzione plotRGB: crea immagini
 plotRGB(TGr, 1, 2, 3, stretch="Lin")
 
+# Funzione levelplot: disegna grafici di colore falso e di contorno
+levelplot(TGr)
+# Funzione levelplot $: considera ogni file interno
+levelplot(TGr$la) da errore
 
-309_
+
+
+#351

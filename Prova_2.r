@@ -90,14 +90,18 @@ library(RStoolbox)
 library(rasterVis)
 
 # Importare tutte le immagini INSIEME, devono ritagliare la stessa area (utile con bande diverse)
-#crea lista di file per la funzione lapply
+# Funzione list.files: crea lista di file per la funzione lapply
 rlist <- list.files(pattern=".tiff") # pattern=scritta in comune nei file
 rlist
+# Funzione lapply: applica a lista di file una funzione (raster)
 import <- lapply(rlist,raster)
-# Funzione per avere le info sul file
 import
+# Funzione stack: raggruppa e rinomina file raster separati
 TGr <- stack(import)
-# Funzione per avere le info sul file
 TGr
+plot(TGr)
+# Funzione plotRGB: crea immagini
+plotRGB(TGr, 1, 2, 3, stretch="Lin")
+
 
 309_

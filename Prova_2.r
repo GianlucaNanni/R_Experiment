@@ -100,4 +100,4 @@ TGr <- stack(import)
 # Funzione per avere le info sul file
 TGr
 
-309
+309_
